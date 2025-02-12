@@ -1,9 +1,0 @@
-# connect to target device
-ssh user@device_ip
-
-# generate applicable SSH key (if needed)
-ssh-keygen -t rsa -b 4096
-ssh-copy-id user@device_ip
-
-# running playbooks
-ansible-playbook -i [inventoryname.yml] [configyaml.yml]
