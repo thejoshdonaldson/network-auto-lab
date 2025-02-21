@@ -3,6 +3,12 @@
 	gather_facts: yes
 	tasks:
 
+		- name: Create backup
+			cisco.ios.ios_config:
+				backup: yes
+				backup_options:
+					dir: /network-auto-lab/automationproject/backups		
+
 		- name: Set IP address for g1/0
 			cisco.ios.ios_config:
 				lines:
