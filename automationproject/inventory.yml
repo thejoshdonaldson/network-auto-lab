@@ -2,7 +2,7 @@
 all:
 	hosts:
 		CiscSDN:
-			ansible_host: 192.168.18.1
+			ansible_host: 172.96.100.100
 			ansible_user: josh
 			ansible_password: Winter2024!!
 			ansible_network_os: cisco.ios.ios
