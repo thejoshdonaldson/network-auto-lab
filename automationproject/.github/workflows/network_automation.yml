@@ -1,0 +1,21 @@
+name: Network Automation
+
+on:
+	push:
+		branches:
+			- feature
+	pull_request:
+		branches: 
+			- feature
+jobs:
+	configuremyip:
+		runs-on: self-hosted
+		steps:
+			- name: Checkout repo
+				uses: actions/checkout@v4
+			- name: Display runner info
+				run: echo "running on $(hostname)"
+			- name: Run ansible playbook
+				run: |
+					ansible-playbook -i inventory.yml config_gns3.yml
+
